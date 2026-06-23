@@ -3,7 +3,7 @@ package java_arrays;
 //Original array: 10 20 30 40 50 60 70
 //Rotated array: 20 30 40 50 60 70 10
 
-public class Program_20 {
+public class Program_21 {
 	public static void main(String[]args) {
 		int[] a = {10,20,30,40,50,60,70};
 		leftRotate(a);
