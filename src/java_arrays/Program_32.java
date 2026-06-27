@@ -27,7 +27,7 @@ public class Program_32 {
 		if(n%2==0) {
 			return false;
 		}
-		for(int i=3;i*i<n;i+=2) {
+		for(int i=3;i*i<=n;i+=2) {
 			if(n%i==0) {
 				return false;
 			}
