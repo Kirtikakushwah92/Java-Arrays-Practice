@@ -1,6 +1,6 @@
 package java_arrays;
-// Selection sort 
-public class Program_73 {
+// Insertion sort 
+public class Program_74 {
 
 	public static void main(String[] args) {
 		int[] a = {3,4,4,5,8,9,1};
@@ -10,23 +10,20 @@ public class Program_73 {
 		}
 		System.out.println();
 		System.out.print("After Sorting : ");
-		selectionSort(a);
+		insertionSort(a);
 		for(int x : a) {
 			System.out.print(x+" ");
 		}
 	}
-	public static void selectionSort(int[] a) {
-		for(int i=0;i<a.length-1;i++) {
-			int min = a[i]; int index = i;
-			for(int j=i+1;j<a.length;j++) {
-				if(a[j]<min) {
-					min=a[j];
-					
-					index=j;
-				}
+	public static void insertionSort(int[] a) {
+		for(int i=1;i<a.length;i++) {
+			int key = a[i];
+			int j = i-1;
+			while(j>=0 && a[j]>key) {
+				a[j+1] = a[j];
+				j--;
 			}
-			a[index] = a[i];
-			a[i] = min;
+			a[j+1] = key;
 		}
 	}
 	
